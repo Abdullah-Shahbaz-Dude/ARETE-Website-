@@ -6,7 +6,7 @@ import img from "../../assets/images/HomePage/Coming Soon Sticker by Lemon Print
 const CommingSoon = () => {
   return (
     <div className="giphy-container">
-      <img src={img} alt="Coming soon..." />
+      <p>Comming Soon</p>
     </div>
   );
 };

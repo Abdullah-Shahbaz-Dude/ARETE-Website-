@@ -13,3 +13,7 @@
 
   font-size: 2rem;
 }
+.giphy-container p {
+  font-size: clamp(2rem, 8vw, 6rem);
+  color: white;
+}
