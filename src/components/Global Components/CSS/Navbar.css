@@ -1,6 +1,6 @@
+/* ✅ Base Styles */
 nav {
   width: 100%;
-  /* background: #0c2c3c; */
   box-sizing: border-box;
   padding: 5px 0;
   position: fixed;
@@ -14,17 +14,18 @@ nav {
 .nav-header {
   display: flex;
   justify-content: center;
-  align-items: anchor-center;
-  color: rgb(255, 145, 76);
+  align-items: center; /* FIXED 'anchor-center' to 'center' */
+  color: #ff914c;
 }
+
 ul li {
-  /* color: aliceblue; */
   display: inline-block;
   margin: 5px 20px;
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 500;
 }
+
 .nav-btn {
   font-size: 1.5rem;
   border: transparent;
@@ -32,6 +33,7 @@ ul li {
   background: transparent;
   display: none;
 }
+
 .nav-btn:hover {
   cursor: pointer;
   color: rgb(255, 145, 76);
@@ -41,6 +43,7 @@ ul li {
   width: 180px;
   padding: 1%;
 }
+
 .container {
   display: flex;
   align-items: center;
@@ -52,31 +55,97 @@ ul li {
   background: #fff;
   color: #212121;
   padding: 14px 25px;
-  font-size: 16;
+  font-size: 16px;
   border-radius: 30px;
   cursor: pointer;
   border: 0;
   outline: 0;
 }
+
 .dark-nav {
   background: #0c2c3c;
   transition: 0.5s;
 }
+
 nav .dropdown-btn {
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 500;
 }
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
+
+.dropdown-btn {
+  background: transparent;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+/* ✅ Responsive Styles */
+
+/* 📌 LARGER SCREENS (1210px and below) */
+@media (max-width: 1210px) {
+  .container {
+    padding: 1%;
+  }
+  ul li {
+    font-size: 18px; /* Slightly smaller text */
+  }
+}
+
+/* 📌 MEDIUM SCREENS (990px and below) */
+@media (max-width: 990px) {
+  .container {
+    padding: 2%;
+  }
+
+  ul li {
+    font-size: 16px; /* Adjusted font size */
+    margin: 5px 15px;
+  }
+
+  .nav-logo {
+    width: 140px; /* Reduce logo size */
   }
 
   .nav-btn {
-    font-size: 1.5rem;
-    border: transparent;
-    color: #fff;
-    background: transparent;
+    display: block; /* Ensure hamburger menu appears */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: rgb(255, 145, 76);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show when toggled */
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul li {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px; /* Adjust for readability */
+  }
+}
+
+/* 📌 MOBILE SCREENS (768px and below) */
+@media (max-width: 768px) {
+  .nav-btn {
     display: block;
   }
 
@@ -95,12 +164,65 @@ nav .dropdown-btn {
   .nav-links.show {
     display: flex;
   }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  ul li {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .nav-logo {
+    width: 130px; /* Reduce logo size for mobile */
+  }
 }
-.dropdown-btn {
-  background: transparent;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-size: 16px;
+@media (max-width: 1100px) and (min-width: 980px) {
+  .container {
+    padding: 1.5%;
+    display: flex;
+    font-size: 9px;
+  }
+
+  ul li {
+    font-size: 18px; /* Adjusted font size */
+  }
+
+  .nav-logo {
+    width: 160px; /* Reduce logo size slightly */
+  }
+
+  .nav-links {
+    position: absolute;
+
+    right: 0;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .nav-links.show {
+    display: flex; /* Show when toggled */
+  }
+
+  ul {
+    display: flex;
+
+    text-align: center;
+  }
+
+  ul li {
+    display: block;
+
+    font-size: 16px; /* Adjust for better readability */
+  }
+
+  .nav-logo {
+    width: 140px; /* Reduce logo size */
+  }
 }
