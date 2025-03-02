@@ -1,5 +1,5 @@
 import React from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
 import "./CSS/CommingSoon.css";
 import img from "../../assets/images/HomePage/Coming Soon Sticker by Lemon Printers.gif";
 
