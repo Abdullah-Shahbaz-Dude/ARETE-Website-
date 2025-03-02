@@ -1,0 +1,70 @@
+.ready-container {
+  display: flex;
+  flex-direction: column; /* Stack items on small screens */
+  justify-content: center;
+  padding: 5vw;
+  height: auto; /* Adapts dynamically */
+  /* background-color: #21aae0; */
+  margin: 10vw 0;
+  margin-bottom: 5vw;
+  text-align: center;
+  gap: 2vw; /* Ensures spacing */
+}
+
+/* Responsive image styling */
+.ready-img img {
+  max-width: 100%; /* Ensures the image never overflows */
+  height: auto;
+  width: 70%; /* Controls the image size relative to the container */
+}
+
+/* Adjust layout for tablets and larger screens */
+@media (min-width: 768px) {
+  .ready-container {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 308px;
+    padding: 20px;
+    padding-left: 75px;
+    /* margin-top: 170px; */
+  }
+
+  .ready-img img {
+    width: 1000px; /* Fixed width for consistency on larger screens */
+  }
+}
+
+/* Text container */
+.ready-container-text {
+  max-width: 80%;
+  text-align: center;
+}
+
+/* Responsive text */
+.ready-container-text h2 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem); /* Adjusts font size dynamically */
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0c2c3c;
+  margin-bottom: 10px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+  .ready-container {
+    padding: 8vw;
+    /* margin: 5vw 0; */
+    gap: 4vw;
+  }
+
+  .ready-img img {
+    width: 80%; /* Adjusted for better mobile appearance */
+  }
+
+  .ready-container-text h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 5px;
+  }
+}

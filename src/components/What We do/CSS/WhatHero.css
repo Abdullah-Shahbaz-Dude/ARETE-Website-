@@ -1,0 +1,52 @@
+.WhatHero-img {
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.WhatHero-img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.WhatHero-text-container h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Darker Text Background */
+.WhatHero-text-container {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+
+  z-index: 2;
+}
+
+/* Add a Darker Gradient Overlay Over Images */
+.WhatHero-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3)
+  );
+  z-index: 1;
+}

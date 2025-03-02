@@ -1,0 +1,59 @@
+.text-paragraph-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 70vh;
+}
+
+.text-paragraph-left {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.text-paragraph-left h2 {
+  font-size: 36px; /* Increased font size */
+  font-weight: bold;
+  color: #222; /* Slightly darker color for better contrast */
+}
+
+.text-paragraph-right {
+  flex: 2;
+  font-size: 24px; /* Increased font size */
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .text-paragraph-left h2 {
+    font-size: 32px; /* Slightly smaller on tablets */
+  }
+
+  .text-paragraph-right {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-paragraph-container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .text-paragraph-left {
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .text-paragraph-left h2 {
+    font-size: 28px; /* Smaller on mobile */
+  }
+
+  .text-paragraph-right {
+    font-size: 20px;
+  }
+}

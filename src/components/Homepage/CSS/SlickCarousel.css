@@ -1,0 +1,230 @@
+/* 🌟 Scope everything inside .slick-carousel-container */
+.slick-carousel-container {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  height: 700px; /* Ensure enough space for enlarged slides */
+}
+
+/* 🎯 Ensure styles only affect carousel */
+.slick-carousel-container .slides-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background-color: #0c2c3c;
+  position: relative;
+  width: 500px; /* Increase width */
+  height: 700px; /* Increase height */
+  background-color: white;
+  top: 10%; /* Adjust positioning */
+}
+
+/* 🎨 Style the slides inside the carousel */
+.slick-carousel-container .slides-content-container {
+  background: #fff;
+  border-radius: 13px;
+  overflow: hidden;
+  padding: 15px;
+  height: 500px;
+  width: 370px;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid #888;
+}
+
+/* 🖼️ Style images inside the carousel */
+.slick-carousel-container .slides-images {
+  width: 100%; /* Ensures full width */
+  height: 100%; /* Fills the container height */
+  max-height: 300px; /* Set a max height to avoid overflow */
+  object-fit: contain; /* Ensures the full image fits inside */
+  border-radius: 8px; /* Optional: Rounds the corners */
+  background-color: white; /* Optional: Background color if image has transparency */
+}
+
+.slick-carousel-container .slides-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 📝 Text styling */
+.slick-carousel-container .slides-text {
+  font-weight: 800;
+  line-height: 20px;
+  font-family: "M PLUS Rounded 1c";
+  color: #333;
+  margin-top: 10px;
+  position: absolute;
+  top: 406px;
+  left: -1px;
+  padding: 20px;
+}
+
+/* 🔵 Custom dots for Slick */
+.slick-carousel-container .slick-dots {
+  position: absolute;
+  bottom: -40px; /* Position dots below the buttons */
+  width: 100%;
+  text-align: center;
+}
+
+.slick-carousel-container .slick-dots li button:before {
+  color: #888;
+}
+
+.slick-carousel-container .slick-dots li.slick-active button:before {
+  color: #007bff;
+  font-size: 14px;
+}
+.slick-carousel-container {
+  position: relative; /* This is important */
+}
+
+/* 🎯 Position Slick Buttons Below the Slides */
+.slick-carousel-container .slick-prev,
+.slick-carousel-container .slick-next {
+  position: absolute;
+  /* bottom: -60px;  */
+  z-index: 2;
+  /* background-color: #ff6600; */
+  /* color: #ff6600; */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* font-size: 200px; */
+}
+
+.slick-carousel-container .slick-prev:hover,
+.slick-carousel-container .slick-next:hover {
+  background-color: #ff6600;
+  color: #ff6600;
+}
+
+/* Space Out Left and Right Buttons */
+.slick-carousel-container .slick-prev {
+  left: 40%;
+  top: 630px;
+}
+
+.slick-carousel-container .slick-next {
+  top: 630px;
+  left: 50%;
+}
+
+/* Adjust Button Size */
+.slick-carousel-container .slick-prev::before,
+.slick-carousel-container .slick-next::before {
+  font-size: 20px; /* Adjust size */
+  color: white; /* Ensure visibility */
+}
+
+/* 🖼️ Prevent Background Overlay from Blocking Content */
+.slick-carousel-container .slick-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Lower the z-index so it does not interfere */
+  pointer-events: none; /* Ensure it doesn't block interactions */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -50px;
+}
+
+.slick-carousel-container .slides-img {
+  width: 100%;
+  height: 100%; /* Ensures full height */
+  object-fit: cover; /* Ensures image fills the container without stretching */
+  border-radius: 4px; /* Optional: Adjust corners */
+}
+
+/* Ensure the container takes the correct height */
+.slick-carousel-container .slides-images {
+  width: 100%;
+  height: 300px; /* Ensure a fixed height */
+  overflow: hidden;
+}
+
+.slick-carousel-container .slides-images {
+  width: 100%;
+  height: 100%;
+  max-height: 300px; /* Keep the same max height */
+  object-fit: cover; /* Ensures the image fills the container */
+  border-radius: 8px;
+  transform: scale(1.2); /* Zooms in the image */
+}
+.slick-coursel-btn {
+  background-color: rgb(12, 44, 60);
+  position: relative;
+  top: 62px;
+  border: transparent;
+  padding: 10px;
+  color: white;
+}
+.slick-coursel-btn:hover {
+  background-color: #ff6600;
+  cursor: pointer;
+}
+
+/* Show button on hover over the image */
+.slick-carousel-container .slides-content-container:hover .slick-coursel-btn {
+  background-color: #ff6600;
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 768px) {
+  .slick-carousel-container .slides-text {
+    font-size: 1rem;
+  }
+
+  /* Adjust button position on smaller screens */
+  .slick-carousel-container .slick-prev {
+    left: 35%;
+  }
+
+  .slick-carousel-container .slick-next {
+    left: 60%;
+  }
+
+  .slick-carousel-container .slick-prev,
+  .slick-carousel-container .slick-next {
+    bottom: -50px; /* Adjust for smaller screens */
+    width: 35px;
+    height: 35px;
+  }
+
+  .slick-carousel-container .slick-dots {
+    bottom: -30px; /* Adjust dots below buttons */
+  }
+}
+@media (max-width: 768px) {
+  .slick-carousel-container .slides-content-container {
+    width: 100%; /* Full width */
+  }
+
+  .slick-carousel-container .slides-images img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    max-height: 300px; /* Keep the same max height */
+    object-fit: cover; /* Ensures the image fills the container */
+    border-radius: 8px;
+    transform: scale(1.2); /* Zooms in the image */
+  }
+}
+
+.slick-carousel-container .slides-container {
+  background-color: #0c2c3c;
+}

@@ -1,0 +1,21 @@
+.whatDoesHero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 60px 20px;
+  height: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.whatDoesHero-container img {
+  height: 400px;
+}
+
+.organizationHero-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  padding: 20px;
+}

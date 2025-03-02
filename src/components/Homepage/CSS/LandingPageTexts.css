@@ -1,0 +1,87 @@
+/* Ensures responsiveness while maintaining original alignment */
+.LandingPageTexts-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjusts dynamically */
+  margin: 5vh 0; /* Uses relative units */
+  text-align: center;
+  padding: 5vw;
+  position: relative;
+  padding-bottom: 1vw;
+  background-color: #21aae0;
+  margin-bottom: 0px;
+}
+
+/* Responsive text adjustments */
+.LandingPageTexts-container-right p {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem); /* Adjusts based on screen size */
+  line-height: 1.6;
+  padding: 2vw;
+  max-width: 90%; /* Prevents text from overflowing */
+  width: 900px;
+  text-align: left;
+  top: 24px;
+  left: 31px;
+  position: absolute;
+  color: #0c2c3c;
+  word-wrap: break-word; /* Prevents text overflow */
+}
+
+/* Ensures the image scales correctly */
+.LandingPageTexts-container-right-left img {
+  background-color: #21aae0;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  position: relative;
+  left: 300px; /* Keeps original alignment */
+}
+
+/* 📱 Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .LandingPageTexts-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 4vw;
+  }
+
+  .LandingPageTexts-container-right p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 3vw;
+    position: relative;
+    width: 100%; /* Makes text fit smaller screens */
+    top: 0;
+    left: 0;
+  }
+
+  .LandingPageTexts-container-right-left img {
+    max-width: 300px;
+    left: 0; /* Centers the image on small screens */
+  }
+}
+
+/* 📟 Tablet (max-width: 900px) */
+@media (max-width: 900px) {
+  .LandingPageTexts-container {
+    flex-direction: column;
+    padding: 5vw;
+  }
+
+  .LandingPageTexts-container-right p {
+    font-size: 1.1rem;
+    width: 90%; /* Ensures text remains readable */
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .LandingPageTexts-container-right-left img {
+    max-width: 350px;
+    left: 0; /* Centers the image on tablets */
+  }
+}
